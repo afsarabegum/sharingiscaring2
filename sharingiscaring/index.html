@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>01 - Pinning</title>
+
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet">
+        
+        
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/highlight.pack.js"></script>
+		<script src="js/lib/modernizr.custom.min.js"></script>
+        <script src="js/lib/greensock/TweenMax.min.js"</scrpit>
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+      
+		
+        
+        <script src="scrollmagic/uncompressed/ScrollMagic.js"></script>
+        
+        
+		<script src="scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+        <script src="scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+        
+        
+	
+	</head>
+
+	<body>
+
+		<section id="one" class="full flex-h-centred flex-v-bottom">
+			<h1 class="animated infinite bounce">Sightsavers</h1>
+		</section>
+
+            <section id="two">
+			<h3> VISION </h3>
+			<p class= "fade-in"> What’s your morning routine? Brushing your teeth, taking a shower, washing your face, drinking a cup of tea; notice what those all have in common?</P> 
+                <P class= "fade-in">Water. Without access to clean water, life would be very different.</p>
+            
+                <p class= "fade-in">For people living in developing countries who don’t have access to a clean water supply, there’s a risk of catching harmful diseases like river blindness (onchocerciasis).</p>
+            
+            <p class= "fade-in"> content </p>
+            <p class= "fade-in"> content </p>
+            
+            
+		</section>
+
+		<section id="three" class="full">
+		</section>
+
+
+		<section id="four" class="full">
+		</section>
+
+		<section id="five" class="full flex-h-centred flex-v-centred">
+			<div id="mc_embed_signup" class="content">
+				<h2>Sign up for updates</h2>
+				<form action="//twitter.us12.list-manage.com/subscribe/post?u=43efbdeecd252c30b1ead06d0&amp;id=ab4c4ec792" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							<label for="mce-EMAIL">Your email</label>
+							<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="you@email.com">
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div> 
+						<div style="position: absolute; left: -5000px;" aria-hidden="true">
+						<input type="text" name="b_43efbdeecd252c30b1ead06d0_ab4c4ec792" tabindex="-1" value="">
+					</div>
+					<div class="clear">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<script>
+                $(function()
+            {
+                //init controller
+                var controller= new ScrollMagic.controller();
+            $('.fade-in').each(function(){
+            
+            var tween = TweenMAX.from($(this),0.3, {autoAplha:0, scale: 0.5, y:'+=30', ease:linear.easeNone})
+            
+            var scene= new ScrollMagic.Scene({
+                triggerElement: this
+            });
+            .setTween(tween)
+            .addTo(controller);
+            });
+            
+            })
+
+		</script>
+
+	</body>
+</html>
